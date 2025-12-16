@@ -1,9 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
 
-/* =====================
-   Helpers
-===================== */
 function makeReference() {
   return "AOL-" + Math.random().toString(36).slice(2, 8).toUpperCase();
 }
@@ -19,18 +17,12 @@ export default function PaymentPage() {
   const { state } = useLocation();
   const navigate = useNavigate();
 
-  /* =====================
-     UI State
-  ===================== */
   const [paymentMethod, setPaymentMethod] = useState("card");
   const [isPaying, setIsPaying] = useState(false);
 
   const [card, setCard] = useState({ number: "", expiry: "", cvv: "" });
   const [bank, setBank] = useState("");
 
-  /* =====================
-     Fee Mapping
-  ===================== */
   const feeConfig = {
     "Tuition Fee": 1200,
     "Exam Retake Fee": 49.8,
@@ -42,9 +34,7 @@ export default function PaymentPage() {
   const feeLabel = state?.fee || "Exam Retake Fee";
   const subtotal = feeConfig[feeLabel] || 49.8;
 
-  /* =====================
-     Province Tax
-  ===================== */
+
   const taxRates = {
     ON: 0.13,
     BC: 0.12,
@@ -64,9 +54,6 @@ export default function PaymentPage() {
   const tax = useMemo(() => +(subtotal * taxRate).toFixed(2), [subtotal, taxRate]);
   const total = useMemo(() => (subtotal + tax).toFixed(2), [subtotal, tax]);
 
-  /* =====================
-     Validation
-  ===================== */
   const isCardValid =
     card.number.replace(/\s/g, "").length >= 16 &&
     card.expiry.length >= 4 &&
@@ -137,7 +124,7 @@ export default function PaymentPage() {
                   style={{ lineHeight: 0 }}
                 >
                   <img
-                    src="/logo.png"
+                    src={logo}
                     alt="Logo"
                     style={{
                       height: 34,      // ✅ controls alignment
@@ -291,10 +278,10 @@ export default function PaymentPage() {
                       <span>${subtotal.toFixed(2)}</span>
                     </div>
 
-                    <div className="d-flex justify-content-between mb-2">
+                    {/* <div className="d-flex justify-content-between mb-2">
                       <span>Tax ({(taxRate * 100).toFixed(2)}%)</span>
                       <span>${tax.toFixed(2)}</span>
-                    </div>
+                    </div> */}
 
                     <hr />
 

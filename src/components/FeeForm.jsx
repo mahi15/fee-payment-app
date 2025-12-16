@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
+import banner from "../assets/banner.png";
+import mainlogo from "../assets/mainLogo.png";
 
 export default function FeeForm() {
   const navigate = useNavigate();
@@ -43,7 +46,7 @@ export default function FeeForm() {
                   style={{ lineHeight: 0 }}
                 >
                   <img
-                    src="/logo.png"
+                    src={logo}
                     alt="Logo"
                     style={{
                       height: 34,      // ✅ controls alignment
@@ -85,7 +88,7 @@ export default function FeeForm() {
                     <div className="col-md-6 p-4 p-md-5 bg-white">
 
                       <div className="mb-4">
-                        <img src="/mainLogo.png" alt="" />
+                        <img src={mainlogo} alt="" />
                         <hr />
                         <h3 className="fw-bold mb-1 text-center" style={{ color: "#146C43" }}>
                           Fee Payment
@@ -169,7 +172,7 @@ export default function FeeForm() {
                     {/* RIGHT IMAGE */}
                     <div className="col-md-6 d-none d-md-block">
                       <img
-                        src="/banner.png"
+                        src={banner}
                         alt="Banner"
                         className="img-fluid h-100"
                         style={{ objectFit: "cover" }}
