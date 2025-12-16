@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/fee-payment-app/static/css/main.1a5caeb7.css",
+    "main.js": "/fee-payment-app/static/js/main.5a8e9b4e.js",
+    "static/js/239.d9a64593.chunk.js": "/fee-payment-app/static/js/239.d9a64593.chunk.js",
+    "static/js/977.acc3ed02.chunk.js": "/fee-payment-app/static/js/977.acc3ed02.chunk.js",
+    "static/js/455.4d2d9e75.chunk.js": "/fee-payment-app/static/js/455.4d2d9e75.chunk.js",
+    "static/js/453.895a628d.chunk.js": "/fee-payment-app/static/js/453.895a628d.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/fee-payment-app/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "/fee-payment-app/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/mainLogo.png": "/fee-payment-app/static/media/mainLogo.c2a9f3e870df0200a74c.png",
+    "index.html": "/fee-payment-app/index.html",
+    "main.1a5caeb7.css.map": "/fee-payment-app/static/css/main.1a5caeb7.css.map",
+    "main.5a8e9b4e.js.map": "/fee-payment-app/static/js/main.5a8e9b4e.js.map",
+    "239.d9a64593.chunk.js.map": "/fee-payment-app/static/js/239.d9a64593.chunk.js.map",
+    "977.acc3ed02.chunk.js.map": "/fee-payment-app/static/js/977.acc3ed02.chunk.js.map",
+    "455.4d2d9e75.chunk.js.map": "/fee-payment-app/static/js/455.4d2d9e75.chunk.js.map",
+    "453.895a628d.chunk.js.map": "/fee-payment-app/static/js/453.895a628d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a5caeb7.css",
+    "static/js/main.5a8e9b4e.js"
+  ]
+}
