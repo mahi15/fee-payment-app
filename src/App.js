@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import FeeForm from "./components/FeeForm";
+import PaymentPage from "./components/PaymentPage";
+import SuccessPage from "./components/SuccessPage";
+import PaymentFailed from "./components/PaymentFailed";
+import AdminDashboard from "./components/AdminDashboard";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<FeeForm />} />
+        <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/success" element={<SuccessPage />} />
+        <Route path="/failed" element={<PaymentFailed />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
